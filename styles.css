@@ -1,0 +1,128 @@
+/* =========================
+   GLOBAL THEME VARIABLES
+========================= */
+:root {
+    --primary: #0d6efd;
+    --secondary: #20c997;
+    --dark-bg: #0b1320;
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --text-light: #f8f9fa;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(135deg, #0b1320, #1c2541);
+    color: var(--text-light);
+    font-size: clamp(15px, 1.2vw, 18px);
+}
+
+/* =========================
+   DASHBOARD LAYOUT
+========================= */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 260px;
+    padding: 30px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.brand-title {
+    font-size: clamp(24px, 2.5vw, 32px);
+    color: var(--secondary);
+    margin-bottom: 30px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #ccc;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.sidebar nav a:hover {
+    background: rgba(13,110,253,0.25);
+    color: #fff;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+/* =========================
+   CARD SECTIONS
+========================= */
+.card-section {
+    background: var(--glass-bg);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card-section h2,
+.card-section h3 {
+    font-size: clamp(22px, 2vw, 30px);
+}
+
+.subtitle {
+    font-size: clamp(16px, 1.5vw, 20px);
+    opacity: 0.85;
+}
+
+/* =========================
+   FORM STYLES
+========================= */
+.form-control {
+    background: rgba(255,255,255,0.12);
+    border: none;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+.form-control:focus {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+    padding: 12px 24px;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .main-content {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriAI – Premium Smart Farming Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1 class="brand-title">AgriAI</h1>
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#crop">Crop Planning</a>
+            <a href="#tools">Tool Sharing</a>
+            <a href="#schemes">Gov Schemes</a>
+            <a href="#market">Market</a>
+            <a href="#export">Export</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="card-section">
+            <h2>Farmer Dashboard</h2>
+            <p class="subtitle">
+                AI-powered decisions, real-time market intelligence, and export-ready farming.
+            </p>
+        </section>
+
+        <!-- Crop Planning -->
+        <section id="crop" class="card-section">
+            <h3>AI Crop Planning</h3>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <input id="cropName" class="form-control" placeholder="Crop Name (e.g. Wheat)">
+                </div>
+                <div class="col-md-6">
+                    <input id="district" class="form-control" placeholder="District">
+                </div>
+                <div class="col-md-6">
+                    <input id="area" class="form-control" placeholder="Area (Hectares)">
+                </div>
+                <div class="col-md-6">
+                    <input id="sowingDate" type="date" class="form-control">
+                </div>
+            </div>
+
+            <button class="btn btn-primary mt-3" onclick="analyzeCrop()">Analyze with AI</button>
+
+            <div id="cropResult" class="mt-4"></div>
+        </section>
+
+        <!-- Tool Sharing -->
+        <section id="tools" class="card-section">
+            <h3>Tool Sharing & Rental</h3>
+            <p>
+                Find nearby agricultural tools using location-based matching.
+            </p>
+        </section>
+
+        <!-- Government Schemes -->
+        <section id="schemes" class="card-section">
+            <h3>Government Schemes</h3>
+            <p>
+                Automatically filtered schemes based on land, crop, and farmer profile.
+            </p>
+        </section>
+
+        <!-- Market -->
+        <section id="market" class="card-section">
+            <h3>Domestic Market Selling</h3>
+            <p>
+                Connect with verified buyers and get AI-assisted price discovery.
+            </p>
+        </section>
+
+        <!-- Export -->
+        <section id="export" class="card-section">
+            <h3>Export Facilitation</h3>
+            <p>
+                Premium export module with compliance, logistics, and forex payments.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
